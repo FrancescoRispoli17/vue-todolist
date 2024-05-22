@@ -25,8 +25,18 @@ const { createApp } = Vue
       }
     },
     methods:{
-      prevImage(){
-        
+      add(){
+        const text=document.querySelector('input');
+        if(text.value !== ''){
+          console.log(text.value);
+          const obj={
+            text:text.value,
+            done:false
+          }
+          this.list.push(obj);
+        }
+        else
+        alert('Inserire la todo da aggiungere');
       }
     }
   }).mount('#app')

@@ -18,6 +18,10 @@
                 <ul>
                     <li v-for="todo in list" :class="{'text-decoration-line-through':todo.done}">{{todo.text}}</li>
                 </ul>
+            <div>
+                <input type="text">
+                <button type="button" class="btn btn-primary ms-2" @click="add"> Aggiungi </button>
+            </div>
             </div>
         </div>
     </div>
