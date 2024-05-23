@@ -21,16 +21,17 @@ const { createApp } = Vue
           done:true
         },
 
-        ]
+        ],
+        newobj:'',
       }
     },
     methods:{
       add(){
-        const text=document.querySelector('input');
-        if(text.value !== ''){
-          console.log(text.value);
+        
+        if(this.newobj !== ''){
+          
           const obj={
-            text:text.value,
+            text:this.newobj,
             done:false
           }
           this.list.push(obj);
